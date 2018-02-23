@@ -12,8 +12,50 @@ Es la unidad de datos especificada en un protocolo de una determinada capa.
 | CAPA 4 Transport Layer  | segmento (TCP) o datagrama (UDP) |
 | CAPA 5-6-7 Application Layer | mensaje  |
 
+# CAPA DE TRANSPORTE
+La tarea de esta capa es proporcionar un transporte de datos confiable de la máquina de origen a la máquina de destino, independientemente de la red o redes físicas en uso.
 
+### Sockets: process Identification
+<IP Adrress>:<Port number>
 
+- Los puertos conocidos son los comprendidos del 0 al 1023.
+- Los puertos registrados son aquellos del 1024 al 49151.
+- Los puertos dinámicos y/o privados son los de 49152 a 65535.
+
+- **Transmission Control Protocol (TCP)**: 
+    - Protocolo de transporte
+    - Todas las funciones orientado a la conexión fiable para las aplicaciones.
+    - Incluye un gestor para el control de flujo.
+## User Datagram Protocol (UDP) 
+    - Protocolo de transporte
+    - RFC 768, año 1980
+    - Simple, proporciona solo direccionamiento de capa.
+        1. Transferencia de datos de la capa superior: una aplicación envía datos al protocolo UDP.
+        2. Encapsulamiento del mensaje UDP: El mensaje de capa superior se encapsula en el campo de datos de un mensaje UDP. Las cabeceras del mensaje UDP se rellenan, incluyendo el puerto de origen de la aplicación que envñia los datos y el puerto de destino del destinatario.
+        3. Transferir Mensaje a IP: Se pasa el mensaje UDP a la capa 3 para la transmisión.
+### Qué no hace UDP?
+- No establece conexiones antes de enviar datos. Simplemente empaqueta y envía.
+- No proporciona ninguna garantía de que sus mensajes llegaran.
+- No proporciona los reconocimientos que demuestran que se reciben los datos.
+- No detecta la pérdida de mensajes ni los retransmite.
+- No asegura que los datos se reciban en el mismo orden en que fueron enviados.
+- No proporciona ningún mecanismo para gestionar el flujo de datos entre los dispositivos o manejar la congestión.
+
+### Por qué algunas aplicaciones usan UDP?
+- El rendimiento es más importante que la fiabilidad.
+- Intercambio de datos que son "Cortos y relevantes".
+- Tráfico multicast.
+- Aplicaciones que utilizan UDP y TCP.
+
+### UDP Message Format
+Encabezado solo tiene 8 bytes de longitud.
+| Field Name | Size (bits) | Description |
+| ---------- | ----------- | ----------- |
+| Source port | 16 | Número de puerto que originó el mensaje UDP |
+| Destination port | 16 | Número de puerto del proceso que es detinatario |
+| Length | 16 | Longitud de todo el datagrama, incluyendo la cabecera |
+| Checksum | 16 | Suma de comprobación opcional |
+| Data | Variable | Mensaje de capa superior que se enviará |
 
 # Cableado estructurado
 
@@ -55,7 +97,7 @@ COA (Centralised optical architecture): Desde El campus distributor se puede ir 
 CP (Consoloidation Point).
 MUTOA (Multi User Telecommunications Outlet Assembly)
 
-##Espacios y montantes
+## Espacios y montantes
 - Building entrance facility
 - Equipment room
 - Telecommunicattions room
@@ -73,7 +115,7 @@ MUTOA (Multi User Telecommunications Outlet Assembly)
 - Fortaleza de piso adecuada.
 - Control de acceso.
 
-Separación de cables de energías y de datos.
+## Separación de cables de energías y de datos.
 
 
 
