@@ -22,10 +22,6 @@ La tarea de esta capa es proporcionar un transporte de datos confiable de la má
 - Los puertos registrados son aquellos del 1024 al 49151.
 - Los puertos dinámicos y/o privados son los de 49152 a 65535.
 
-- **Transmission Control Protocol (TCP)**: 
-    - Protocolo de transporte
-    - Todas las funciones orientado a la conexión fiable para las aplicaciones.
-    - Incluye un gestor para el control de flujo.
 ## User Datagram Protocol (UDP) 
 
 - Protocolo de transporte
@@ -59,6 +55,16 @@ Encabezado solo tiene 8 bytes de longitud.
 | Length            | 16            | Longitud de todo el datagrama, incluyendo la cabecera |
 | Checksum          | 16            | Suma de comprobación opcional                         |
 | Data              | Variable      | Mensaje de capa superior que se enviará               |
+
+## Transmission Control Protocol (TCP)
+
+- Protocolo de transporte
+- RFC 793, septiembre 1981, varias actualizaciones.
+- Todas las funciones orientado a la conexión fiable para las aplicaciones.
+- Bidireccional.
+- Múltiple conexión y dispositivo-identificado.
+- Incluye un gestor para el control de flujo.
+- Confirmación.
 
 # Cableado estructurado
 
