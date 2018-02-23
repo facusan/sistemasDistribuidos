@@ -27,12 +27,14 @@ La tarea de esta capa es proporcionar un transporte de datos confiable de la má
     - Todas las funciones orientado a la conexión fiable para las aplicaciones.
     - Incluye un gestor para el control de flujo.
 ## User Datagram Protocol (UDP) 
-    - Protocolo de transporte
-    - RFC 768, año 1980
-    - Simple, proporciona solo direccionamiento de capa.
-        1. Transferencia de datos de la capa superior: una aplicación envía datos al protocolo UDP.
-        2. Encapsulamiento del mensaje UDP: El mensaje de capa superior se encapsula en el campo de datos de un mensaje UDP. Las cabeceras del mensaje UDP se rellenan, incluyendo el puerto de origen de la aplicación que envñia los datos y el puerto de destino del destinatario.
-        3. Transferir Mensaje a IP: Se pasa el mensaje UDP a la capa 3 para la transmisión.
+
+- Protocolo de transporte
+- RFC 768, año 1980
+- Simple, proporciona solo direccionamiento de capa.
+    1. Transferencia de datos de la capa superior: una aplicación envía datos al protocolo UDP.
+    2. Encapsulamiento del mensaje UDP: El mensaje de capa superior se encapsula en el campo de datos de un mensaje UDP. Las cabeceras del mensaje UDP se rellenan, incluyendo el puerto de origen de la aplicación que envñia los datos y el puerto de destino del destinatario.
+    3. Transferir Mensaje a IP: Se pasa el mensaje UDP a la capa 3 para la transmisión.
+
 ### Qué no hace UDP?
 - No establece conexiones antes de enviar datos. Simplemente empaqueta y envía.
 - No proporciona ninguna garantía de que sus mensajes llegaran.
@@ -49,13 +51,14 @@ La tarea de esta capa es proporcionar un transporte de datos confiable de la má
 
 ### UDP Message Format
 Encabezado solo tiene 8 bytes de longitud.
-| Field Name | Size (bits) | Description |
-| ---------- | ----------- | ----------- |
-| Source port | 16 | Número de puerto que originó el mensaje UDP |
-| Destination port | 16 | Número de puerto del proceso que es detinatario |
-| Length | 16 | Longitud de todo el datagrama, incluyendo la cabecera |
-| Checksum | 16 | Suma de comprobación opcional |
-| Data | Variable | Mensaje de capa superior que se enviará |
+
+| Field Name        | Size (bits)   | Description                                           |
+| ------------------| ------------- | ----------------------------------------------------- |
+| Source port       | 16            | Número de puerto que originó el mensaje UDP           |
+| Destination port  | 16            | Número de puerto del proceso que es detinatario       |
+| Length            | 16            | Longitud de todo el datagrama, incluyendo la cabecera |
+| Checksum          | 16            | Suma de comprobación opcional                         |
+| Data              | Variable      | Mensaje de capa superior que se enviará               |
 
 # Cableado estructurado
 
