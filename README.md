@@ -13,3 +13,72 @@ Es la unidad de datos especificada en un protocolo de una determinada capa.
 | CAPA 5-6-7 Application Layer | mensaje  |
 
 
+
+
+# Cableado estructurado
+
+Modelo jerarquico de 3 capas:
+- el cableado horizontal
+- el cableado troncal edificio
+- el cableado troncal del campus
+
+## Distribuidores
+Los paneles de conexión son conocidos como distribuidores
+- el **distribuido piso** es el vínculo entre el cableado y la troncal del edificio.
+- el **distribuidos del edificio** es el vínculo entre la troncal del edificio y la del campus.
+- el **distribuidor de campus** es donde todo el cableado de campus se reúne.
+
+**Enlace permanente:** Es el cableado entre el distribuidor de piso y la toma de telecomunicaciones (PL, permanent link).
+
+La adición de los cables de conexión en cada extremo de la PL forma el **cableado horizontal**.
+Los cables de conexión de la TO a la vinculación de los equipos activos son los cables del **área de trabajo**.
+
+Asociado con el distribuidor de campus, se encuentra la **sala principal de equipos**.
+
+|       ISO               |        ANSI       |
+| ----------------------- | :--------------:  |
+| Campus distributor      | Main Crossconnect |
+| Building distributor    | Intermediate CrossConnect|
+| Floor distributor       | Horizontal Crossconnect|
+
+## Longitudes máximas de cableado
+La distancia máxima del cableado horizontal es de 100 metros. El enlace permaenente, PL, no puede exceder los 90 metros.
+
+ISO: La distancia total compuesta por la suma del cableado horizontal más el backbone del edificio, más el backbone del campus no debe superar los 2000 m.
+
+ANSI:Las distancias de backbone vienen definidas:
+Intermediate- Horizontal: 300 m sin importar el medio.
+Main- intermediate: desde 500 a 2700 mestros dependdiendo del medio.
+
+COA (Centralised optical architecture): Desde El campus distributor se puede ir directamente a las terminales o desde los building distributors.
+
+CP (Consoloidation Point).
+MUTOA (Multi User Telecommunications Outlet Assembly)
+
+##Espacios y montantes
+- Building entrance facility
+- Equipment room
+- Telecommunicattions room
+
+### Consideraciones de los espacios
+- Distancia de la zona de trabajo a ser servida.
+- Posición vertical relativa de las salas de telecomunicaciones.
+- Accesibilidad.
+- Dimensiones adecuadas.
+- Dedicación exclusiva.
+- No deben contener tuberías.
+- Ventilación adecuada y aire acondicionado.
+- Energía.
+- Fuentes de interferencia.
+- Fortaleza de piso adecuada.
+- Control de acceso.
+
+Separación de cables de energías y de datos.
+
+
+
+
+
+
+
+
